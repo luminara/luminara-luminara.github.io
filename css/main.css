@@ -1,0 +1,71 @@
+:root {
+  --blue: #3b8ea5;
+}
+
+body {
+  margin: 0;
+  font-family: "Yaldevi", sans-serif;
+  font-style: normal;
+  background-color: #c4f1be;
+}
+
+.navbar {
+  padding-right: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--blue);
+}
+.navbar span {
+  padding: 1em;
+  color: #201e50;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+}
+.cover img {
+  display: block;
+  width: 100%;
+}
+.cover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  opacity: 0.8;
+}
+.cover .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.cover .content p {
+  color: #151d34;
+  font-weight: 600;
+  margin: 0;
+  font-size: 2.5rem;
+}
+.cover::after {
+  background: #4fa39e;
+  content: "";
+  opacity: 6;
+  height: 30px;
+  left: 0%;
+  position: absolute;
+  right: 5%;
+  top: calc(100% - 30px);
+  width: 100%;
+  z-index: 2;
+  clip-path: polygon(0 30px, 100% 0%, calc(100% - 0px) 100%, 0% 100%);
+}
