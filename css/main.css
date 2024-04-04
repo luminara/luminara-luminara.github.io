@@ -2,15 +2,18 @@
   --blue: #3b8ea5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Yaldevi", sans-serif;
   font-style: normal;
-  background-color: #c4f1be;
 }
 
 .navbar {
-  padding-right: 5em;
+  padding-right: 10em;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -68,4 +71,50 @@ body {
   width: 100%;
   z-index: 2;
   clip-path: polygon(0 30px, 100% 0%, calc(100% - 0px) 100%, 0% 100%);
+}
+
+.container {
+  max-width: 1050px;
+}
+.section {
+  border-bottom: 1px solid #c6c5c5;
+}
+.aboutMe .container {
+  display: flex;
+  margin: 3em 15em 0 15em;
+}
+.aboutMe .imageContainer {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+}
+.aboutMe img {
+  height: 150px;
+  border-radius: 50%;
+}
+.aboutMe .content {
+  color: #4a4a4a;
+  font-weight: 500;
+  flex: 1;
+}
+.heading {
+  color: #374054;
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 350;
+  margin: 0 0 30px 0;
+}
+.heading::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  height: 1px;
+  width: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #3498db;
 }
