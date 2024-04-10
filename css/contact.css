@@ -46,3 +46,25 @@ label {
 #message {
   height: 10em;
 }
+
+.extraContact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: last baseline;
+  width: 50%;
+}
+.extraContact div {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.extraContact img {
+  margin-right: 2rem;
+}
+.extraContact a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
