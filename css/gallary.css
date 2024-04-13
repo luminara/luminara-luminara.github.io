@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1050px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.column img {
+  width: 300px;
+  margin: 1rem;
+}
