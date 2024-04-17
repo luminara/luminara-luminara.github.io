@@ -1,6 +1,8 @@
 const column = document.querySelectorAll(".column");
 const limit = 10;
 
+addImg();
+
 async function getImg() {
   let response = await fetch(
     "https://api.thecatapi.com/v1/images/search?limit=" + limit,
@@ -20,4 +22,12 @@ async function addImg() {
   }
 }
 
-addImg();
+function isPageBottom() {
+  return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+}
+
+window.addEventListener("scroll", function() {
+  if (isPageBottom()) {
+    addImg();
+  }
+});
